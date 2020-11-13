@@ -1,0 +1,43 @@
+@import "../../styles.scss";
+
+.headerStyle{
+    width: 100%;
+    height: 3.5em;
+    background-color: $gris;
+    @include flexbox();
+}
+
+.headerBox{
+    @include flexbox();
+    width: 33.33%;
+    height: 100%;
+    h1 {
+        font-family: $fuente;
+        font-size: $h1;
+        color: $blanco;
+        padding-left: 40%;
+    }
+}
+
+.headerBoxes{
+    @include flexbox();
+    width: 33.33%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.profileCircle{
+    width: 3em;
+    height: 85%;
+    margin-right: 0.25em;
+    margin-top: 0.25em;
+    border-radius: 50em;
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50em;
+    }
+}
+
+

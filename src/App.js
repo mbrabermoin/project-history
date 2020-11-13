@@ -1,27 +1,40 @@
 import React from 'react';
 import './App.css';
-import Header from './HeaderBar.js';
-import SubHeader from './SubHeaderBar.js';
-import Card from './Card.js';
+import './styles.scss';
+import { Component } from "react";
+import Header from './components/HeaderBar/HeaderBar';
+import SubHeaderBar from './components/SubHeaderBar/SubHeader';
+import ProjectCards from './components/ProjectCards/ProjectCards';
+import FilterModal from './components/FiltersBox/FiltersBox';
+import AddNewModal from './components/AddNewBox/AddNewBox';
 
-
-function App() {
-  return (
-    <div>
-      <div>
-        <Header></Header>
-        <SubHeader></SubHeader>
-      </div>
-      <div className='Card'>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-      </div>
+export default class App extends Component {
+  render() {
+    return (
+      <div> 
+        <Header/>
+        <SubHeaderBar/>
+        <div id="ProjectContainer" className="projectContainer">
+          <ProjectCards/>
+          <ProjectCards/>
+          <ProjectCards/>
+          <ProjectCards/>
+        </div>
+        <div id="ShowMoreButton" className="showMoreStyle"> 
+          <div id="ShowAllBtn" className="btnShowAllStyle">
+              <p> Show All</p>
+          </div>
+        </div>
+        <div id="ModalContainer">
+        <FilterModal></FilterModal>
+        </div>
     </div>
-  );
+    );
+  }
 }
 
-export default App;
 
+/*<div id="ModalContainer">
+<FilterModal></FilterModal>
+<AddNewModal/>
+</div>*/

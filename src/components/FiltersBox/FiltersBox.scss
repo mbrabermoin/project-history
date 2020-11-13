@@ -1,0 +1,134 @@
+@import "../../styles.scss";
+
+#FilterModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    transition: all 1.3s;
+    z-index: 10;
+    @include flexbox();
+    justify-content: center;
+}
+
+#FiltersContainer {
+    width: 45vw;
+    background-color: $blanco;
+    position: absolute;
+    margin: 0;
+    top: 5%;
+    @include flexbox();
+    flex-direction: column;
+}
+
+.box1 {
+    @include filterboxes(48%);
+}
+
+.box2 {
+    @include filterboxes(80%);
+}
+
+.box3 {
+    @include filterboxes(60%);
+}
+
+.filtersContainerBoxes {
+    width: 100%;
+    height: 35vh;
+    background-color: #ffffff;
+    @include flexbox();
+    flex-direction: row;
+}
+
+h2 { 
+    width: 100%;
+    margin-left: 0.5em;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    color: $gris;
+}
+
+h3 {
+    margin-left: 0.5em;
+    margin-top: 0.5em;
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+    color: $gris;
+}
+
+//---------- Radio buttons styles--------------
+#DateRadioFilters{
+    @include flexbox();
+    flex-direction: row;
+    width: 100%;
+    height: 3em;
+    justify-content: flex-start;
+}
+
+.radio {
+    width: 50%;
+    height: 100%;
+    
+}
+
+//---------- Dropdown buttons styles--------------
+
+#DropdownsFilters{
+    @include flexbox();
+    flex-direction: row;
+    width: 100%;
+    height: 3em;
+    justify-content: center;
+}
+
+#DropdownsFiltersRow2 {
+    @include flexbox();
+    flex-direction: row;
+    width: 100%;
+    height: 3em;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.dropdowns {
+    width: 45%;
+    height: 100%;
+    padding-left: 0.25em;
+}
+
+#StatusCheckboxes{
+    @include flexbox();
+    flex-direction: column;
+    width: 100%;
+    height: 3em;
+    justify-content: flex-start;
+    margin-left: 0.5em;
+}
+
+#SaveFilters {
+    @include flexbox();
+    width: 100%;
+    height: 100%; 
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.btnStyleSave {
+    width: 8em;
+    height: 100%;
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
+    background-color: $gris;
+    border-radius: 0.5em;
+    cursor: pointer;
+    p {
+        color: $blanco;
+        text-align: center;
+    }
+}

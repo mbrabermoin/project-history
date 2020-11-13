@@ -1,0 +1,75 @@
+//-------- FUENTES --------
+$fuente: "Helvetica";
+$h1    : 1.5rem;
+$h2    : 1.1rem;
+$h3    : 1rem;
+$p     : 0.9rem;
+$b     : 0.7rem;
+
+//-------- COLORES --------
+$blanco        : #f0f0f0;
+$gris          : #3a3a47;
+$grisc         : #808080;
+$negro         : #292933;
+$resaltado     : #f9ae1a;
+$verde         : #42B069;
+$iluminado     : #dddddd;
+$opaco         : #c0c0c0;
+$sombra        : rgba(0, 0, 0, 0.2);
+$sombra_oscura : rgba(0, 0, 0, 0.5);
+$borders       : #cccccc;
+
+//-------- TAMAÑOS --------
+$header : 4rem;
+$icono  : 2rem;
+
+//-------- APP STYLE -------
+
+@mixin flexbox {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  } 
+
+@mixin filterboxes($width) {
+    width: $width;
+    height: 90%;
+    border: 2px solid $grisc;
+    border-radius: 3px;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+  .projectContainer{
+    width: 100%;
+    height: 90%;
+    @include flexbox();
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 1.5em;
+}
+
+.showMoreStyle {
+  width: 100%;
+  height: 2.5em;
+  margin-top: 3em;
+  @include flexbox();
+  flex-direction: row;
+  justify-content: center;
+}
+
+.btnShowAllStyle {
+  width: 8em;
+  height: 100%;
+  margin-right: 1em;
+  margin-top: 0.5em;
+  background-color: $gris;
+  border-radius: 0.5em;
+  cursor: pointer;
+  p {
+      color: $blanco;
+      text-align: center;
+  }
+}
